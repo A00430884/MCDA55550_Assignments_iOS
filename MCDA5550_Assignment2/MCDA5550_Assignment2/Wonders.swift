@@ -18,7 +18,7 @@ struct Wonders {
     init?(wonder: [String: Any]) {
         guard let properties = wonder["properties"] as? [String: Any], let geometry = wonder["geometry"] as? [String: Any] else { return nil }
         self.name = properties["name"] as? String ?? ""
-        self.description = properties["description"] as? String
+        self.description = properties["description"] as? String ?? ""
         self.userRating = properties["userRating"] as? Double ?? 0.0
         self.imageURL = properties["imageURL"] as? String ?? ""
         self.coordinates = geometry["coordinates"] as? [Double] ?? []
