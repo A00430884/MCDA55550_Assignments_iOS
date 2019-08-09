@@ -15,7 +15,6 @@ class WondersDetailsViewController: UIViewController {
     @IBOutlet weak var wondersUserRating: UILabel!
     @IBOutlet weak var wondersImageURL: UILabel!
     @IBOutlet weak var wondersCoordinates: UILabel!
-    
     @IBOutlet weak var wondersImageView: UIImageView!
     
     var wondersDetail: [Wonders] = []
@@ -53,17 +52,12 @@ class WondersDetailsViewController: UIViewController {
         wondersName.text = "Name: " + name
         wondersDescreption.text = "Description: " + description_str
         wondersUserRating.text = "UserRating: " + userRating
-        //wondersImageURL.text = "ImageURL: " + imageURL
         wondersCoordinates.text = "Coordinates: " + coordinates
         urlImage=URL(string: imageURL)
-       downloaded(from: urlImage)
-        
-        
-        
+        downloaded(from: urlImage)
     }
     
     func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {  // for swift 4.2 syntax just use ===> mode: UIView.ContentMode
-//      contentMode = mode
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
                 let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
@@ -76,7 +70,4 @@ class WondersDetailsViewController: UIViewController {
             }
             }.resume()
     }
-    
-    
-
 }
