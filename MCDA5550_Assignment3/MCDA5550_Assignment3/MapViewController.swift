@@ -25,7 +25,6 @@ class MapViewController: UIViewController {
         mapView.delegate = self
         setUpMapView()
         setUPLocationManager()
-
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -51,7 +50,6 @@ class MapViewController: UIViewController {
             mapView.addAnnotation(annotation2)
 //            zoom(annotation2.coordinate)
         }
-        
         
         mapView.showsUserLocation = true
     }
@@ -103,8 +101,6 @@ extension MapViewController: MKMapViewDelegate {
         }
     }
 }
-
-
 
 extension MKAnnotation {
     func mapItem(coordinate: CLLocationCoordinate2D) -> MKMapItem {

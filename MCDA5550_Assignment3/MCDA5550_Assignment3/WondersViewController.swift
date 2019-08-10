@@ -15,7 +15,7 @@ class WondersViewController: UIViewController {
     var wonders: [Wonders] = []
     var dataToSave = Data()
     
-    //     Local Storage
+    // Local Storage
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
     static let ArchiveURL = DocumentsDirectory.appendingPathComponent("Wonders")
     
@@ -51,6 +51,7 @@ class WondersViewController: UIViewController {
             saveToLocalStorage()
         }
     }
+    
     // MARK:- Local Storage using NSKeyedArchiver
     func saveToLocalStorage(){
         do{

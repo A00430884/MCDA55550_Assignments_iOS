@@ -34,10 +34,6 @@ class WondersDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print (wondersDetail[0])
-        print (wondersDetail[0].name)
-        print (wondersDetail[0].description)
-//        wondersName.text = "This is the name "+name
         
         name = wondersDetail[0].name
 //        description_str = wondersDetail[0].wonderDescription ?? "No Descreption"
@@ -84,8 +80,6 @@ class WondersDetailsViewController: UIViewController {
         // Present Dialog message
         present(alertController, animated: true, completion:nil)
     }
-    
-    @objc
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "map_segue"{

@@ -26,7 +26,6 @@ class SavedWondersViewController: UIViewController {
         pageControl.numberOfPages = slides.count
         pageControl.currentPage = 0
         
-//        print (savedWonders)
         // Do any additional setup after loading the view.
     }
     
